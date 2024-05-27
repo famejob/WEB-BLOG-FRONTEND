@@ -42,6 +42,7 @@ function MyBlogs() {
   const [searchQuery, setSearchQuery] = React.useState<string>("");
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
+  const [loading, setLoading] = React.useState(true);
 
   const checkTokenExpiration = () => {
     if (token) {
@@ -88,6 +89,7 @@ function MyBlogs() {
       });
       const data = await response.json();
       setBlogs(data);
+      setLoading(false);
     } catch (error) {
       Swal.fire({
         title: "การดำเนินการล้มเหลว!",
@@ -152,6 +154,16 @@ function MyBlogs() {
       }
     }
   };
+
+  if (loading) {
+    return (
+      <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
+        <Typography component="h1" variant="h5" align="center">
+          กำลังโหลด...
+        </Typography>
+      </Container>
+    );
+  }
 
   return (
     <>

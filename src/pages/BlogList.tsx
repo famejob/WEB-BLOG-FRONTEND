@@ -40,6 +40,7 @@ function BlogList() {
   const token = localStorage.getItem("token");
   const location = useLocation();
   const navigate = useNavigate();
+  const [loading, setLoading] = React.useState(true);
 
   const fetchData = async (query = "") => {
     try {
@@ -49,6 +50,7 @@ function BlogList() {
       const response = await fetch(url);
       const data = await response.json();
       setBlogs(data);
+      setLoading(false);
     } catch (error) {
       Swal.fire({
         title: "การดำเนินการล้มเหลว!",
@@ -94,6 +96,16 @@ function BlogList() {
     setSearchQuery(query);
     fetchData(query);
   };
+
+  if (loading) {
+    return (
+      <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
+        <Typography component="h1" variant="h5" align="center">
+          กำลังโหลด...
+        </Typography>
+      </Container>
+    );
+  }
 
   return (
     <>
