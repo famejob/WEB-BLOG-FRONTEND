@@ -1,0 +1,89 @@
+/* กำหนดสไตล์พื้นฐานสำหรับ Quill Editor */
+.ql-editor {
+  line-height: 1.6;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+/* สไตล์สำหรับรูปภาพ */
+.ql-editor img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* สไตล์สำหรับลำดับรายการ */
+.ql-editor ol,
+.ql-editor ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.ql-editor ol {
+  list-style-type: decimal;
+}
+
+.ql-editor ul {
+  list-style-type: disc;
+}
+
+.ql-editor li {
+  margin-bottom: 5px;
+}
+
+/* สไตล์สำหรับ heading */
+.ql-editor h1 {
+  font-size: 2em;
+  margin: 20px 0 10px;
+}
+
+.ql-editor h2 {
+  font-size: 1.75em;
+  margin: 20px 0 10px;
+}
+
+.ql-editor h3 {
+  font-size: 1.5em;
+  margin: 20px 0 10px;
+}
+
+/* สไตล์สำหรับลิงก์ */
+.ql-editor a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* สไตล์สำหรับ blockquote */
+.ql-editor blockquote {
+  border-left: 4px solid #ddd;
+  margin: 10px 0;
+  padding-left: 10px;
+  color: #666;
+  font-style: italic;
+}
+
+/* สไตล์สำหรับ code blocks */
+.ql-editor pre {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* สไตล์สำหรับ strong */
+.ql-editor strong {
+  font-weight: bold;
+}
+
+/* สไตล์สำหรับ emphasis (italic) */
+.ql-editor em {
+  font-style: italic;
+}
+
+/* สไตล์สำหรับ underline */
+.ql-editor u {
+  text-decoration: underline;
+}
